@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+            <meta content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" name="viewport"/>
+            <title>
+                Angular Template
+            </title>
+            <link href="css/bootstrap.min.css" rel="stylesheet"/>
+            <link href="css/font-awesome.min.css" rel="stylesheet"/>
+            <link href="css/style.css" rel="stylesheet"/>
+            
+            <script src="lib/jquery-2.1.4.js"></script>
+            <script src="lib/bootstrap.min.js"></script>
+            <script src="lib/angular.min.js"></script>
+            <script src="lib/angular-ui-router.min.js"></script>
+        </meta>
+    </head>
+    <body ng-strict-di="">
+    <header>
+        <div ng-include="'header.html'"></div>
+    </header>
+    <section>
+       <div class="container">
+           <div class="row">
+               <div class="col-md-2">
+                   <div ng-include="'sidebar.html'"></div>
+               </div>
+               <div class="col-md-10">
+                   <ui-view></ui-view>
+               </div>
+           </div>
+       </div>
+    </section>
+    
+    <!-- application script -->
+    <script src="app/app.js"></script>
+    <script src="app/routes.js"></script>
+    <script src="app/controllers.js?d"></script>
+    <!-- application script -->
+
+    </body>
+</html>
